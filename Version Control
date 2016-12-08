@@ -1,5 +1,8 @@
 #include<iostream.h>
-int z;
+float z;
+void pembagian(x,y){
+z= x/y;
+}
 void perkalian(x,y){
 	z=x*y;
 }
@@ -14,7 +17,7 @@ void main(){
 	cout << "Perhitungan Dasar" << endl;
 	cout << "masukan nilai1 = ";cin >> x;
 	cout << "masukan nilai2 = ";cin >> y;
-	cout << "1. penjumlahan" << endl << "2. perkalian" << endl;
+	cout << "1. penjumlahan" << endl << "2. perkalian" << endl <<"3. pembagian"<<endl;
 	cout << "masukan pilihan: "; cin >> plh;
 
 	if(plh==1){
@@ -24,6 +27,11 @@ void main(){
 		if(plh==2){
 			perkalian(x,y);
 			cout << "hasil perkalian = " << z << endl;
+		}
+	else
+		if(plh==3){
+			pembagian(x,y);
+			cout<<"hasil pembagian = "<< z <<endl ;
 		}
 		else{
 			cout << "pilihan tidak tersedia!!";
