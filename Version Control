@@ -1,19 +1,31 @@
 #include<iostream.h>
-int x,y,z,z2;
+int z;
 void perkalian(x,y){
-z2=x*y;
+	z=x*y;
 }
-void pertambahan(x,y)
-{
-z= x+y;
+void pertambahan(x,y){
+	z= x+y;
 }
-void main()
-{
-cout << "masukan nilai1 = ";cin >> x;
-cout << "masukan nilai2 = ";cin >> y;
-pertambahan(x,y);
-cout << "hasil penjumlahan = " << z << endl;
 
-perkalian(x,y);
-cout << "hasil perkalian = " << z2 << endl;
+void main(){
+	int x,y;
+	int plh;
+
+	cout << "Perhitungan Dasar" << endl;
+	cout << "masukan nilai1 = ";cin >> x;
+	cout << "masukan nilai2 = ";cin >> y;
+	cout << "1. penjumlahan" << endl << "2. perkalian" << endl;
+	cout << "masukan pilihan: "; cin >> plh;
+
+	if(plh==1){
+		pertambahan(x,y);
+		cout << "hasil penjumlahan = " << z << endl;
+	}else
+		if(plh==2){
+			perkalian(x,y);
+			cout << "hasil perkalian = " << z << endl;
+		}
+		else{
+			cout << "pilihan tidak tersedia!!";
+		}
 }
